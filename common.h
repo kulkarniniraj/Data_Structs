@@ -5,6 +5,10 @@ typedef unsigned __int32 uint32_t;
 typedef unsigned __int64 uint64_t;
 #endif
 
+#ifdef _WIN32_
+#include <malloc.h>
+#else
+#endif
 #define MYRET_SUCCESS	1
 #define MYRET_FAIL		0	
 typedef uint8_t myret;
