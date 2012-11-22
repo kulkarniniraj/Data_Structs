@@ -53,10 +53,10 @@ myret MyQueue_Exit(MyQueue *Queue)
 	MyQueueFrame* temp = NULL;
 	if(!Queue)
 		return MYRET_FAIL;
-	while(Queue->Top)
+	while(Queue->Rear)
 	{
-		temp = Queue->Top;
-		Queue->Top = Queue->Top->Next;
+		temp = Queue->Rear;
+		Queue->Rear = Queue->Rear->Next;
 		free(temp);
 	}
 	return MYRET_SUCCESS;
